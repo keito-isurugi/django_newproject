@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">愛知県：雨量個別観測局</h1>
+  </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+  <ul class="list-group list-group-flush">
+    <div>
+      <p>観測局(江南市)</p>
+    </div>
+    {% for post, post2 in list %}
+      <div>
+        <a href="{{ post2 }}">{{ post }}</a></td>
+      </div>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}
